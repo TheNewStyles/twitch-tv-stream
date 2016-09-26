@@ -1,4 +1,21 @@
-* {
+body {
 	color: ;
-	background-color: 
+	background-color: #00796B; 
+}
+
+h5{
+	padding-left: .75rem;
+}
+
+.card-image {
+	border-radius: 50%;
+	overflow: hidden;
+	width: 95px;
+	height: 95px;
+	margin-top: 3em;
+	margin-left: 1em;	
+}
+
+#twitch-display{
+	margin-top: 10em;
 }
