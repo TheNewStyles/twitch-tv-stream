@@ -4,7 +4,8 @@ body {
 }
 
 h5{
-	padding-left: .75rem;
+	padding-left: .80em;
+	padding-right: .80em;
 }
 
 .card-image {
@@ -16,6 +17,19 @@ h5{
 	margin-left: 1em;	
 }
 
-#twitch-display{
+.material-icons{
+	margin-left: .5em;
+}
+
+.brand-logo{
+	margin-left: .5em;
+}
+
+#back-panel{
 	margin-top: 10em;
+	background-color: #F5F5F5;
+}
+
+#twitch-display{
+	margin-top: 2.5em;
 }
