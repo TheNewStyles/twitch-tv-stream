@@ -27,7 +27,7 @@ channels.forEach(function(channel) {
 	});
 }); //end channels.forEach()
 
-//create cards
+// create cards
 function createChannelDiv(channel, name, status, img, url){
 
     var $div = '<div id="' + channel + '" class="col s12 "><div class="card horizontal"><div class="card-image"><img src=' + img + '></div><div class="card-stacked"><h5 class="header">' + name + '</h5><div class="card-content"><p>' + status + '</p></div><div class="card-action"><a href="' + url + '" target="_blank">Go To Channel</a></div></div></div></div>';
@@ -39,7 +39,13 @@ function createChannelDiv(channel, name, status, img, url){
 // search bar 
 var $search = $("#search");
 
-//search channelID child text
+// clear search bar on X click
+$("#close").click(function(){
+	$search.val("");
+	$("#twitch-display").children().show();
+});
+
+// search channelID child text
 function search(channelID){
 	if($("#" +  channelID).children().text().toLowerCase().includes($search.val().toLowerCase()) || $search.val() === " "){
 		$("#" +  channelID).show();	
@@ -48,7 +54,7 @@ function search(channelID){
 	}
 }
 
-//on keyup in search bar 
+// on keyup in search bar 
 $search.keyup(function(){
 	for(var i=0; i<channels.length; i++){
 
