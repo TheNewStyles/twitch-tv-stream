@@ -4,7 +4,7 @@ $(document).ready(function(){
 $(".button-collapse").sideNav();
 
 //twitch channels
-var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "comster404"];
+var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "comster404", "MedryBW"];
 var URL = "https://api.twitch.tv/kraken/channels/";
 
 channels.forEach(function(channel) {
@@ -30,7 +30,22 @@ channels.forEach(function(channel) {
 // create cards
 function createChannelDiv(channel, name, status, img, url){
 
-    var $div = '<div id="' + channel + '" class="col s12 "><div class="card horizontal"><div class="card-image"><img src=' + img + '></div><div class="card-stacked"><h5 class="header">' + name + '</h5><div class="card-content"><p>' + status + '</p></div><div class="card-action"><a href="' + url + '" target="_blank">Go To Channel</a></div></div></div></div>';
+	if(status == "null" || status == null || status == " "){ 
+		status = "No status available";
+	}
+
+    var $div = '<div id="' ;
+    $div += channel ;
+    $div += '" class="col s12 "><div class="card horizontal"><div class="card-image"><img src=';     
+    $div += img ;
+    $div += '></div><div class="card-stacked"><h5 class="header">' 
+    $div += name;  
+    $div += '</h5><div class="card-content"><p>';
+    $div += status; 
+    $div += '</p></div><div class="card-action"><a href="'; 
+    $div += url; 
+    $div += '" target="_blank">Go To Channel</a></div></div></div></div>';
+    
 
     $('#twitch-display').append($div);
 }
