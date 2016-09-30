@@ -33,3 +33,12 @@ h5{
 #twitch-display{
 	margin-top: 2.5em;
 }
+
+.on{
+	color: green;
+	text-align: right;
+}
+
+.off{
+	color:  red;
+}
