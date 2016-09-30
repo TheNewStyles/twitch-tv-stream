@@ -97,31 +97,33 @@ $search.keyup(function(){
 
 function addOnlineStatus(stream, streamID){
 	if(stream == null){		
-		$('#' + streamID).addClass('isOffline');
+		$('#' + streamID).addClass('is-offline');
+		$('#' + streamID).find('h5').append('<i class="material-icons off">highlight_off</i>');		
 	}else{
-		$('#' + streamID).addClass('isOnline');
+		$('#' + streamID).addClass('is-online');
+		$('#' + streamID).find('h5').append('<i class="material-icons on">check_circle</i>');
 	}
 }
 
 //click on Online filter to view only online channels
 $(".onlineFilter").click(function(){	
-	$('.isOnline').show();
-	$('#comster404').addClass('isOffline');
+	$('.is-online').show();
+	$('#comster404').addClass('is-offline');
 	$(".isOffline").toggle();
 });
 
 //click on Offline filter to view only offline channels
 $(".offlineFilter").click(function(){	
-	$('.isOffline').show();
-	$('#comster404').addClass('isOffline');
-	$(".isOnline").toggle();
+	$('.is-offline').show();
+	$('#comster404').addClass('is-offline');
+	$(".is-online").toggle();
 });
 
 //click on All to see all channels
 $(".allFilter").click(function(){	
-	$('.isOffline').show();
+	$('.is-offline').show();
 	$('#comster404').show();
-	$(".isOnline").show();
+	$(".is-online").show();
 });
 
 }); //end $(document).ready()
