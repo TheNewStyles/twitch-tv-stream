@@ -106,24 +106,25 @@ function addOnlineStatus(stream, streamID){
 }
 
 //click on Online filter to view only online channels
-$(".onlineFilter").click(function(){	
+$(".online-filter").click(function(){	
 	$('.is-online').show();
-	$('#comster404').addClass('is-offline');
-	$(".isOffline").toggle();
+	$(".is-offline").toggle();
+	$('#sidenav-overlay').trigger('click');
 });
 
 //click on Offline filter to view only offline channels
-$(".offlineFilter").click(function(){	
+$(".offline-filter").click(function(){	
 	$('.is-offline').show();
 	$('#comster404').addClass('is-offline');
-	$(".is-online").toggle();
+	$('.is-online').toggle();
+	$('#sidenav-overlay').trigger('click');
 });
 
 //click on All to see all channels
-$(".allFilter").click(function(){	
+$(".all-filter").click(function(){	
 	$('.is-offline').show();
-	$('#comster404').show();
-	$(".is-online").show();
+	$('.is-online').show();
+	$('#sidenav-overlay').trigger('click');
 });
 
 }); //end $(document).ready()
