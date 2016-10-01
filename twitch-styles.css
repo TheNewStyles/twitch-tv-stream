@@ -18,7 +18,7 @@ h5{
 }
 
 .material-icons{
-	margin-left: .5em;
+	margin-left: .50em;
 }
 
 .brand-logo{
@@ -35,10 +35,13 @@ h5{
 }
 
 .on{
-	color: green;
-	text-align: right;
+	color: #1B998B;
+	margin-left: .20em;
+	font-size: 20px;
 }
 
 .off{
-	color:  red;
+	color:  #F44447;
+	margin-left: .20em;
+	font-size: 20px;
 }
