@@ -11,8 +11,8 @@ h5{
 .card-image {
 	border-radius: 50%;
 	overflow: hidden;
-	min-width: 95px;
-	min-height: 95px;
+	width: 95px;
+	height: 95px;
 	margin-top: 3em;
 	margin-left: 1em;	
 }
