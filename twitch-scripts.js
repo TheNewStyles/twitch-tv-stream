@@ -1,10 +1,19 @@
+////////////////// Nav Menu  //////////////////
+function openNav(){
+  document.getElementById("nav").style.height= "100%";
+}
+
+function closeNav(){
+  document.getElementById("nav").style.height = "0%";
+}
+
 $(document).ready(function(){
 
 //nav
 $(".button-collapse").sideNav();
 
 //twitch channels api
-var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "comster404", "MedryBW"];
+var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "MedryBW"];
 var URL = "https://api.twitch.tv/kraken/channels/";
 
 channels.forEach(function(channel) {
